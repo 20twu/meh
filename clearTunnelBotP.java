@@ -1,7 +1,7 @@
 /*
  * Give your Name here:
  * Run the main method so you can visually see the problem you need to solve
- * An instance of clearTunnelBotS is facing a tunnel that has at least one Thing on each intersection.
+ * An instance of clearTunnelBotP is facing a tunnel that has at least one Thing on each intersection.
  * When given the clearTunnel command, the robot should remove all the Things, placing them at the head of the tunnel.
  * No Empty Trips!
  * The robot may carry at most one Thing at a time and may not make any trips back to the tunnel once all the Things have been removed.
@@ -20,11 +20,11 @@
  
 import becker.robots.*;
 
-//Some of the work has been done for you.  clearTunnelBotS already extends RobotSE and the superclass has been initialized.
-public class clearTunnelBotS extends RobotSE
+//Some of the work has been done for you.  clearTunnelBotP already extends RobotSE and the superclass has been initialized.
+public class clearTunnelBotP extends RobotSE
 {
 
-public clearTunnelBotS (City aCity, int aStreet, int anAvenue, Direction aDir, int numThings)
+public clearTunnelBotP (City aCity, int aStreet, int anAvenue, Direction aDir, int numThings)
    {    super(aCity, aStreet, anAvenue, aDir, numThings);
    }
 
@@ -133,8 +133,8 @@ public clearTunnelBotS (City aCity, int aStreet, int anAvenue, Direction aDir, i
 
 
       //the objects are made are made for you
-      clearTunnelBotS hauler1 = new clearTunnelBotS(warsaw, 1, 1, Direction.EAST,0);
-      clearTunnelBotS hauler2 = new clearTunnelBotS(warsaw, 4, 1, Direction.EAST,0);
+      clearTunnelBotP hauler1 = new clearTunnelBotP(warsaw, 1, 1, Direction.EAST,0);
+      clearTunnelBotP hauler2 = new clearTunnelBotP(warsaw, 4, 1, Direction.EAST,0);
       
 
       hauler1.setLabel("1");
