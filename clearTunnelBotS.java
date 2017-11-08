@@ -59,6 +59,7 @@ public clearTunnelBotS (City aCity, int aStreet, int anAvenue, Direction aDir, i
         while(this.frontIsClear())
         {this.move();
          }
+                //this if loop is not required, the bot will be at the end anyways
         if(!this.frontIsClear())
         {this.putThing();
          }
@@ -70,6 +71,7 @@ public clearTunnelBotS (City aCity, int aStreet, int anAvenue, Direction aDir, i
        while(this.frontIsClear())
        {this.move();
         }
+                //this if is not required, the bot will move to the final wall anyways
        if(!this.frontIsClear())
         {this.putThing();
          }
