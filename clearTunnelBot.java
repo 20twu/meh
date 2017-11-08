@@ -63,7 +63,6 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
             //Makes method call on itself again if boolean is true
       if(getAnother == true){
        this.clearTunnel();}
-      else{}
     }
 
     
