@@ -1,0 +1,24 @@
+# City saved on 2005/7/1@11:33:30
+
+# Window title
+Harvest a Field
+# first street, first avenue, num streets, num avenues
+0 0 8 8
+# intersection size
+38
+# things
+   becker.robots.Thing 1 1
+   becker.robots.Thing 1 1
+   becker.robots.Thing 1 1
+   becker.robots.Thing 2 1
+   becker.robots.Thing 2 1
+   becker.robots.Thing 3 1
+   becker.robots.Thing 3 1
+   becker.robots.Thing 3 1
+   becker.robots.Thing 3 1
+   becker.robots.Thing 3 1
+   becker.robots.Thing 4 1
+   becker.robots.Thing 4 1
+   becker.robots.Thing 4 1
+   becker.robots.Thing 4 1
+   
