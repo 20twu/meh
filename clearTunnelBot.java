@@ -121,7 +121,7 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
       
       hauler1.setSpeed(5);
       hauler2.setSpeed(5);
-      
+      //Testing, testing
       //objects already calling the clearTunnel() method
       hauler1.clearTunnel();
       hauler2.clearTunnel();
