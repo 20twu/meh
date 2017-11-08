@@ -47,7 +47,6 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
       if(!this.canPickThing()&&!this.frontIsClear())
       { getAnother = false;
         }
-        else{}
         //Turn around
       this.turnAround();
         //Move back to start
@@ -61,8 +60,9 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
             //move forward so that it doesn't mess with first while loop
       this.move();
             //Makes method call on itself again if boolean is true
-      if(getAnother == true){
-       this.clearTunnel();}
+      if(getAnother == true)
+      {this.clearTunnel();
+        }
     }
 
     
