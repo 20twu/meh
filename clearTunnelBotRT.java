@@ -1,7 +1,7 @@
 /*
  * Give your Name here:
  * Run the main method so you can visually see the problem you need to solve
- * An instance of clearTunnelBotR is facing a tunnel that has at least one Thing on each intersection.
+ * An instance of clearTunnelBotRT is facing a tunnel that has at least one Thing on each intersection.
  * When given the clearTunnel command, the robot should remove all the Things, placing them at the head of the tunnel.
  * No Empty Trips!
  * The robot may carry at most one Thing at a time and may not make any trips back to the tunnel once all the Things have been removed.
@@ -20,25 +20,65 @@
  
 import becker.robots.*;
 
-//Some of the work has been done for you.  clearTunnelBotR already extends RobotSE and the superclass has been initialized.
-public class clearTunnelBotR extends RobotSE
+//Some of the work has been done for you.  clearTunnelBotRT already extends RobotSE and the superclass has been initialized.
+public class clearTunnelBotRT extends RobotSE
 {
 
-public clearTunnelBotR (City aCity, int aStreet, int anAvenue, Direction aDir, int numThings)
+public clearTunnelBotRT (City aCity, int aStreet, int anAvenue, Direction aDir, int numThings)
    {    super(aCity, aStreet, anAvenue, aDir, numThings);
    }
    
    //you'll likely need this boolean; think of it as a "switch"
    boolean getAnother = true;
-   
+   int i = 0;
+   int c = 0;
    //the clearTunnel() method has been started that you might like to use
    //BIG HINT: Do NOT try to solve this with one method!
    //Instead, break down the task into smaller parts and have clearTunnel() call those parts
    //In other words, create an algorithm
    public void clearTunnel()
   {   
-      
+      while(!this.canPickThing())
+      { this.move();
+        }
+       if(i==0)
+      {while(this.canPickThing()&&this.frontIsClear())
+      {this.move();
+        }
+        this.pickThing();
+        this.turnAround();
+        while(this.frontIsClear())
+        {this.move();
+        }
+        i++;
+        this.putThing();
+        this.turnAround();
+        this.move();
+        this.clearTunnel();
       }
+        else{
+        while(this.canPickThing()&&this.frontIsClear())
+      {   
+          if(this.canPickThing())
+          {c++;}
+          this.move();
+        }
+        this.turnAround();
+        this.move();
+        this.pickThing();
+        while(this.frontIsClear())
+        {this.move();
+        }
+        
+        
+        this.putThing();
+        this.turnAround();
+        this.move();
+        if(c == 0)
+        {
+        this.clearTunnel();}}
+      }
+    
    public static void main(String[] args)
   {    City warsaw = new City(6,12);
         warsaw.showThingCounts(true);
@@ -84,8 +124,8 @@ public clearTunnelBotR (City aCity, int aStreet, int anAvenue, Direction aDir, i
 
 
       //the objects are made are made for you
-      clearTunnelBotR hauler1 = new clearTunnelBotR(warsaw, 1, 1, Direction.EAST,0);
-      clearTunnelBotR hauler2 = new clearTunnelBotR(warsaw, 4, 1, Direction.EAST,0);
+      clearTunnelBotRT hauler1 = new clearTunnelBotRT(warsaw, 1, 1, Direction.EAST,0);
+      clearTunnelBotRT hauler2 = new clearTunnelBotRT(warsaw, 4, 1, Direction.EAST,0);
       
 
       hauler1.setLabel("1");
