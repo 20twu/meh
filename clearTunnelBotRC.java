@@ -30,15 +30,29 @@ public clearTunnelBotRC (City aCity, int aStreet, int anAvenue, Direction aDir, 
    
    //you'll likely need this boolean; think of it as a "switch"
    boolean getAnother = true;
-   
+   int cnt = 0;
    //the clearTunnel() method has been started that you might like to use
    //BIG HINT: Do NOT try to solve this with one method!
    //Instead, break down the task into smaller parts and have clearTunnel() call those parts
    //In other words, create an algorithm
    public void clearTunnel()
-  {   
-      
-      }
+   {if(frontIsClear())
+       {if(cnt>0)
+           {this.putThing();
+            cnt--;
+            }else
+            {while(this.frontIsClear())
+                {this.move();
+            }
+            this.turnAround();
+            this.pickThing();
+            if(this.canPickThing())
+                 {cnt++;
+                    }
+            this.move();
+                }
+            }
+        }
    public static void main(String[] args)
   {    City warsaw = new City(6,12);
         warsaw.showThingCounts(true);
