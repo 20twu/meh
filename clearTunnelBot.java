@@ -31,22 +31,25 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
    //you'll likely need this boolean; think of it as a "switch"
    boolean getAnother = true;
    
-   //the clearTunnel() method has been started that you might like to use
-   //BIG HINT: Do NOT try to solve this with one method!
-   //Instead, break down the task into smaller parts and have clearTunnel() call those parts
-   //In other words, create an algorithm
-     public void clearTunnel()
-  {   
-      //telling robot to move forward until either there is a Thing or there is a wall in front
-      while(!this.canPickThing()/*&&this.frontIsClear()*/)
-       {this.move();
-        }
-        //pick up the thing
+   public void goToTunnel()
+   {
+       //telling robot to move forward until either there is a Thing or there is a wall in front
+       do{this.move();}
+       while(!this.canPickThing());
+      //pick up the thing
       this.pickThing();
+    }
+    
+    public void decideAnotherRun()
+    {
         //Testing if this is the last thing in the tunnel
-      if(!this.canPickThing()&&!this.frontIsClear())
-      { getAnother = false;
+        if(!this.canPickThing()&&!this.frontIsClear())
+        { getAnother = false;
         }
+    }
+    
+    public void takeThingBack()
+    {
         //Turn around
       this.turnAround();
         //Move back to start
@@ -57,8 +60,17 @@ public clearTunnelBot (City aCity, int aStreet, int anAvenue, Direction aDir, in
       this.putThing();
             //turn around to prepare for another run
       this.turnAround();
-            //move forward so that it doesn't mess with first while loop
-      this.move();
+    }
+   
+   //the clearTunnel() method has been started that you might like to use
+   //BIG HINT: Do NOT try to solve this with one method!
+   //Instead, break down the task into smaller parts and have clearTunnel() call those parts
+   //In other words, create an algorithm
+     public void clearTunnel()
+  {
+      this.goToTunnel();
+      this.decideAnotherRun();
+      this.takeThingBack();
             //Makes method call on itself again if boolean is true
       if(getAnother == true)
       {this.clearTunnel();
