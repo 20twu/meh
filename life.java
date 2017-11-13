@@ -1,37 +1,54 @@
 public class life extends prelife{
     boolean addiction = false;
-    boolean life = false;
+    boolean living = false;
+    
+    int wealth = 0;
+    int intel = 0;
+    
     public void getBirthed()
-    {   this.parents();
+    {   living = true;
+        if(this.parentIsRich())
+        {wealth+=200000;
+         intel+=10;
+        }
+        if(this.parentsAreFailures())
+        {wealth-= 200000;
+         addiction = true;
+         intel-=10;
+        }
+        while(wealth>0)
+        {this.privateSchool();
+         intel+=2;
+         wealth-=1000;
+        }
         /*if(this.parentsAreRich)
-        {*/
-            money += 200000;
+        {
+            wealthey += 200000;
         //}
         /*if(this.parentsAreNormal)
         {
-            money += 100000;
+            wealthey += 100000;
         }
         if(this.parentsArePoor)
         {
-            money -= 100000;
+            wealthey -= 100000;
         }
         if(this.parentsAreFailures)
         {
-            money -= 200000;
+            wealthey -= 200000;
             addiction = true;
         }*/
-        life = true;
         }
     
     public void goToSchool()
     {
         for(int year = 0; year<12; year++)
         {
-            if(money>0)
+            if(wealth>0)
             {this.privateSchool();
             }
             else{
-                if(money>-100001)
+                if(wealth>-100001)
                 {this.publicSchool();
                 }
                 else{
