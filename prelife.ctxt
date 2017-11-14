@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=prelife
-comment1.params=
-comment1.target=void\ parents()
+comment1.params=aCity\ aStreet\ anAvenue\ aDir\ numThings
+comment1.target=prelife(becker.robots.City,\ int,\ int,\ becker.robots.Direction,\ int)
 comment2.params=
-comment2.target=void\ privateSchool()
+comment2.target=void\ parents()
 comment3.params=
-comment3.target=void\ publicSchool()
+comment3.target=void\ privateSchool()
 comment4.params=
-comment4.target=void\ work()
+comment4.target=void\ publicSchool()
 comment5.params=
-comment5.target=void\ findWork()
-numComments=6
+comment5.target=void\ work()
+comment6.params=
+comment6.target=void\ findWork()
+numComments=7

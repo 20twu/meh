@@ -1,6 +1,10 @@
+
+import becker.robots.*;
+
+
 public class life extends prelife{
-    public life(){
-        super ();
+    public life(City aCity, int aStreet, int anAvenue, Direction aDir, int numThings){
+        super (aCity, aStreet, anAvenue, aDir, numThings);
     }
     boolean addiction = false;
     boolean living = false;
@@ -56,8 +60,12 @@ public class life extends prelife{
    
    
       public static void main(String[] arg){
-
-         
+        City warsaw = new City(6,12);
+        warsaw.showThingCounts(true);
+          
+        life John = new life(warsaw, 1, 1, Direction.EAST,0);
+        John.getBorn();
+        John.goToSchool();
         }
 
    }

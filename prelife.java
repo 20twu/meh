@@ -1,6 +1,11 @@
 import java.util.Random;
-
-public class prelife{
+import becker.robots.*;
+public class prelife extends RobotSE{
+    
+    public prelife (City aCity, int aStreet, int anAvenue, Direction aDir, int numThings)
+    {    super(aCity, aStreet, anAvenue, aDir, numThings);
+   }
+    
     int intelligence;
     int money;
     Random rand = new Random();
@@ -9,7 +14,6 @@ public class prelife{
     
     public void parents(){
         parent = rand.nextInt(5)+1;
-        
     }
     public void privateSchool(){
      money -= 2000;
