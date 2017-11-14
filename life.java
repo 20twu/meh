@@ -6,54 +6,33 @@ public class life extends prelife{
     boolean living = false;
     
     int money = 0;
-    int intelligence = 0;
+    int intel = 0;
     
-    public void getBirthed()
-    {   this.parents();
+    public void getBorn()
+    
+     {   this.parents();
         if(parent == 5)
         {
             money += 200000;
         }
         if(parent == 4)
-        {living = true;
-        if(this.parentIsRich())
-        {money+=200000;
-         intelligence+=10;
-        }
-        if(this.parentsAreFailures())
-        {money-= 200000;
-         addiction = true;
-         intelligence-=10;
-        }
-        while(money>0)
-        {this.privateSchool();
-         intelligence+=2;
-         money-=1000;
-        }
-        if(this.parentsAreRich)
-        {
-            money += 200000;
-        }
-        if(this.parentsAreNormal)
         {
             money += 100000;
         }
-        if(parent == 2)
+        
+        if(this.parent == 2)
         {
-            money -= 100000;
+            money-=100000;
         }
-        if(parent == 1)
+        if(this.parent == 1)
         {
-            money -= 200000;
+            money-= 200000;
             addiction = true;
         }
-        life = true;
-        }
-    }
-        
-    
-    public void goToSchool()
-    {
+        living = true;
+      }
+     public void goToSchool()
+     {
         for(int year = 0; year<12; year++)
         {
             if(money>0)
@@ -66,19 +45,21 @@ public class life extends prelife{
                 else{
                     this.work();
                 }
-            }
         }
-    }
-   
-
-    public void findWork()
-    {
+     }
+     
+     }
+     public void findWork()
+     {
        
-    }
+     }
    
    
-    public static void main(String[] arg){
+      public static void main(String[] arg){
 
-    }
+         
+        }
 
-}
+   }
+
+
