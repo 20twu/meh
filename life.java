@@ -3,6 +3,7 @@ public class life extends prelife{
         super ();
     }
     boolean addiction = false;
+    boolean living = false;
     
     int wealth = 0;
     int intel = 0;
@@ -38,12 +39,15 @@ public class life extends prelife{
         /*if(this.parentsAreNormal)
 >>>>>>> 9871b836095e71ea673c7dc0c8e87429d4ced54e
         {
+            wealthey += 100000;
         }
         if(parent == 2)
         {
+            wealthey -= 100000;
         }
         if(parent == 1)
         {
+            wealthey -= 200000;
             addiction = true;
 <<<<<<< HEAD
         }
@@ -57,9 +61,11 @@ public class life extends prelife{
     {
         for(int year = 0; year<12; year++)
         {
+            if(wealth>0)
             {this.privateSchool();
             }
             else{
+                if(wealth>-100001)
                 {this.publicSchool();
                 }
                 else{
