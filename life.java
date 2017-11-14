@@ -1,25 +1,28 @@
 public class life extends prelife{
+    public life(){
+        super ();
+    }
     boolean addiction = false;
     boolean life = false;
     public void getBirthed()
     {   this.parents();
-        /*if(this.parentsAreRich)
-        {*/
+        if(parent == 5)
+        {
             money += 200000;
-        //}
-        /*if(this.parentsAreNormal)
+        }
+        if(parent == 4)
         {
             money += 100000;
         }
-        if(this.parentsArePoor)
+        if(parent == 2)
         {
             money -= 100000;
         }
-        if(this.parentsAreFailures)
+        if(parent == 1)
         {
             money -= 200000;
             addiction = true;
-        }*/
+        }
         life = true;
         }
     

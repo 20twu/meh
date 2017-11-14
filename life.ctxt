@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=life
 comment1.params=
-comment1.target=void\ getBirthed()
+comment1.target=life()
 comment2.params=
-comment2.target=void\ goToSchool()
+comment2.target=void\ getBirthed()
 comment3.params=
-comment3.target=void\ findWork()
-comment4.params=arg
-comment4.target=void\ main(java.lang.String[])
-numComments=5
+comment3.target=void\ goToSchool()
+comment4.params=
+comment4.target=void\ findWork()
+comment5.params=arg
+comment5.target=void\ main(java.lang.String[])
+numComments=6
